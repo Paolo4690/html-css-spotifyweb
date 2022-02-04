@@ -1,3 +1,11 @@
+:root {
+    
+    /* colori */
+    --white: #fff;
+    --grey: #6f6f6f;
+    --green: #adff2d;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +15,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #141922;
-    color: #6f6f6f;
+    color: var(--grey);
 }
 
 header {
@@ -58,11 +66,18 @@ nav ul li img.nav-img,
     opacity: .6;
 }
 
+a {
+    text-decoration: none;
+    color: var(--grey);
+}
+
 nav  a{
     display: inline-block;
-    color: #6f6f6f;
+    color: var(--grey);
     font-weight: 500;
-    text-decoration: none;
+}
+ul li {
+    list-style: none;
 }
 
 nav ul li a.nav-txt{
@@ -70,7 +85,7 @@ nav ul li a.nav-txt{
 }
 
 nav ul li a.txt-white {
-    color: #fff;
+    color: var(--white);
     font-weight: 600;
 }
 
@@ -80,12 +95,12 @@ nav .add-playlist {
 
 nav h3 {
     font-size: .9rem;
-    color: #fff;
+    color: var(--white);
     padding-bottom: .4rem;
 }
 
 i {
-    color: #fff;
+    color: var(--white);
     opacity: .6;
 }
 
@@ -99,9 +114,10 @@ nav .add-playlist i {
 
 
 nav .nav-top .over {
-    height: 100%;
     overflow-y: auto;
 }
+
+
 
 nav ul.playlist li {
     line-height: 30px;
@@ -123,7 +139,7 @@ nav ul.profile li {
 
 nav ul.profile hr {
     margin: .8rem 0;
-    border: 1px solid #6f6f6f;
+    border: 1px solid var(--grey);
 }
 
 nav ul.profile li img {
@@ -134,7 +150,7 @@ nav ul.profile li img {
 nav ul.profile li img.profile-img {
     width: 30px;
     height: 30px;
-    background-color: #6f6f6f;
+    background-color: var(--grey);
     border-radius: 50%;
     overflow: hidden;
     opacity: 1;
@@ -142,6 +158,10 @@ nav ul.profile li img.profile-img {
 }
 
 .bunner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
     position: fixed;
     top: 0;
     right: 0;
@@ -153,6 +173,133 @@ nav ul.profile li img.profile-img {
 
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.bunner .upgrade {
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 2rem;
+    border: 1px solid var(--white);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.bunner .upgrade:hover {
+    transform: scale(1.25);
+}
+.bunner a {
+    color: var(--white);
+}
+
+
+
+main {
+    margin-left: 200px;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 80px);
+    padding: 110px 0 0 .8rem;
+    overflow-y: auto;
+}
+
+main ul.nav-album {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main ul.nav-album li {
+    text-align: center;
+    flex: 0 0 135px;
+    font-size: .9rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+main ul.nav-album li hr {
+    width: 20%;
+    margin: 0 auto;
+    border: 1px solid var(--green);
+}
+
+main ul.nav-album li hr.select {
+    width: 20%;
+    margin: 0 auto;
+    border: 1px solid #141922;
+}
+
+main ul.nav-album li:hover hr.select {
+    border: 1px solid var(--green);
+}
+
+main h1 {
+    color: var(--white);
+    font-size: 1.7rem;
+}
+
+main .row-album {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .row-album .box-album {
+    padding: .8rem .9rem .8rem 0;
+    flex: 0 1 calc(100% / 6);
+    text-align: center;
+}
+
+main .row-album .box-album img {
+    width: 100%;
+}
+
+main .row-album .box-album img.tondo {
+    border-radius: 50%;
+}
+
+main .row-album .box-album h3 {
+    color: var(--white);
+    font-size: 1rem;
+    padding-top: .6rem;
+}
+
+main  span {
+    color: var(--grey);
+    font-size: .8rem;
+    font-weight: 600;
+    padding-top: .3rem;
+}
+
+
+
+
+
+
+@media screen and (min-width:701px) and (max-width:1100px) {
+    main .row-album .box-album {
+    flex: 0 1 calc(100% / 4);
+    }
+
+    main .row-album .box-album h3 {
+        font-size: .9rem;
+    }
+
+}
+
+
+@media screen and (min-width:601px) and (max-width:700px) {
+    main .row-album .box-album {
+    flex: 0 1 calc(100% / 2);
+    }
+
+    main .row-album .box-album h3 {
+        font-size: .9rem;
+    }
+
+}
+
+
+
+
 
 @media screen and (max-width:600px) {
 
@@ -178,10 +325,10 @@ nav ul.profile li img.profile-img {
     nav img.logo-small {
         display: inline-block;
         width: 30px;
-        padding: 10px 0 .8rem 0;
+        padding-top: 10px;
     }
     
-    nav ul {
+    nav ul.principal {
         padding-top: 0;
     }
 
@@ -197,6 +344,34 @@ nav ul.profile li img.profile-img {
         width: calc(100vw - 45px);
     }
     
+    main {
+        margin-left: 45px;
+        width: calc(100vw - 45px);
+        height: calc(100vh - 80px);
+        padding-top: 110px;
+    }
+
+    main .row-album .box-album {
+        flex: 0 1 calc(100% / 2);
+    }
+
+    main .row-album .box-album h3 {
+        font-size: .9rem;
+    }
+    
+}
+
+
+
+@media screen and (max-width:462px) {
+    
+    main .row-album .box-album {
+        flex: 0 1 100%;
+    }
+
+    main .row-album .box-album h3 {
+        font-size: .9rem;
+    }
 }
 
 
