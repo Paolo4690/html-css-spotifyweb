@@ -7,19 +7,27 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #141922;
+    color: #6f6f6f;
 }
 
-nav {
+header {
     position: fixed;
     top: 0;
     left: 0;
+    
 
     height: calc(100vh - 80px);
     width: 200px;
 
-    padding-left: 10px;
+    padding: 0 20px 0 10px;
 
     background-color: #000;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 nav img.logo-big {
@@ -32,7 +40,11 @@ nav img.logo-small {
     display: none;
 }
 
-nav ul li {
+nav ul.principal {
+    padding-top: 25px;
+}
+
+nav ul.principal li {
     display: flex;
     align-items: center;
 }
@@ -41,11 +53,12 @@ nav ul li img {
     width: 30px;
 }
 
-nav ul li img.nav-img {
+nav ul li img.nav-img,
+.nav-bottom .profile img {
     opacity: .6;
 }
 
-nav ul li a{
+nav  a{
     display: inline-block;
     color: #6f6f6f;
     font-weight: 500;
@@ -56,18 +69,83 @@ nav ul li a.nav-txt{
     padding-left: .3rem;
 }
 
-.txt-white {
+nav ul li a.txt-white {
     color: #fff;
     font-weight: 600;
+}
+
+nav .add-playlist {
+    padding-top: 1rem;
+}
+
+nav h3 {
+    font-size: .9rem;
+    color: #fff;
+    padding-bottom: .4rem;
+}
+
+i {
+    color: #fff;
+    opacity: .6;
+}
+
+nav .add-playlist i {
+    font-size: 2.4rem;
+    vertical-align: middle;
+    padding: .5rem .3rem .5rem 0;
 }
 
 
 
 
-header{
+nav .nav-top .over {
+    height: 100%;
+    overflow-y: auto;
+}
+
+nav ul.playlist li {
+    line-height: 30px;
+}
+
+nav ul.playlist li a,
+nav .nav-bottom li a {
+    font-size: .9rem;
+}
+
+nav ul.profile {
+    padding-bottom: .5rem;
+}
+
+nav ul.profile li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul.profile hr {
+    margin: .8rem 0;
+    border: 1px solid #6f6f6f;
+}
+
+nav ul.profile li img {
+    width: 1rem;
+    margin-right: .6rem;
+}
+
+nav ul.profile li img.profile-img {
+    width: 30px;
+    height: 30px;
+    background-color: #6f6f6f;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 1;
+
+}
+
+.bunner{
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 99;
 
     width: calc(100vw - 200px);
     height: 100px;
@@ -78,26 +156,45 @@ header{
 
 @media screen and (max-width:600px) {
 
+    header {
+        width: 45px;
+        padding: 0 ;
+        }
+
     nav {
-        width: 50px;
+        padding: 0 7px;
     }
 
-    nav img.logo-big {
+    nav img.logo-big,
+    nav ul li a.nav-txt,
+    nav .add-playlist,
+    nav .over,
+    nav .profile a.txt, 
+    nav .profile a.txt-white,
+    nav .profile hr {
         display: none;
-    }
-        
+    } 
+    
     nav img.logo-small {
         display: inline-block;
         width: 30px;
         padding: 10px 0 .8rem 0;
     }
-
-    nav ul li a.nav-txt {
-        display: none;
-    }
     
-    header{
-        width: calc(100vw - 50px);
+    nav ul {
+        padding-top: 0;
+    }
+
+    nav ul li {
+        padding: .3rem 0;
+    }
+
+    .download {
+        margin-left: 6px;
+    }
+
+    .bunner{
+        width: calc(100vw - 45px);
     }
     
 }
