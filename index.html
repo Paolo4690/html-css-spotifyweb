@@ -14,21 +14,22 @@
 </head>
 <body>
     
-    <!-- MENU COLONNA SINISTRA -->
+<!-- MENU COLONNA SINISTRA -->
     <header>
 
         <nav>
+<!-- MENU COLONNA SINISTRA -TOP -->
             <div class="nav-top">
 
-                <img class="logo-big" src="img/logo.svg" alt="Logo Spotify">
+                <img class="logo-big desktop" src="img/logo.svg" alt="Logo Spotify">
                 <img class="logo-small" src="img/logo-small.svg" alt="Logo Spotify senza scritta">
 
                 <ul class="principal">
-                    <li>
+                    <li class="line-select">
                         <a href="">
                             <img src="img/home.svg" alt="Logo home">
                         </a>
-                        <a class="txt-white nav-txt" href="">
+                        <a class="txt-white nav-txt desktop" href="">
                             Home
                         </a>
                     </li>
@@ -36,7 +37,7 @@
                         <a href="">
                             <img class="nav-img" src="img/search.svg" alt="lente d'ingrandimento">
                         </a>
-                        <a class="nav-txt" href="">
+                        <a class="nav-txt desktop" href="">
                             Cerca
                         </a>
                     </li>
@@ -44,13 +45,13 @@
                         <a href="">
                             <img class="nav-img" src="img/libreria.svg" alt="tre libri">
                         </a>
-                        <a class="nav-txt" href="">
+                        <a class="nav-txt desktop" href="">
                             La tua libreria
                         </a>
                     </li>
                 </ul>
 
-                <div class="add-playlist">
+                <div class="add-playlist desktop">
                     <h3>PLAYLIST</h3>
                     <a href="">
                         <i class="fas fa-plus-square"></i>
@@ -58,54 +59,34 @@
                     </a>
                 </div>
 
-
-
-
-                <!-- PROBLEMA DI SCROLL  -->
-                <div class="over">
-                <ul class="playlist">
-                    <li>
-                        <a href="" >Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="" >Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="" >Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="" >Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="" >Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="" >Nome Playlist</a>
-                    </li>
-                    <li>
-                        <a href="" >Nome Playlist</a>
-                    </li>
-                </ul>
-                </div>
-                <!-- PROBLEMA DI SCROLL  -->
-
-                
-
-                <!-- <div class="over">
-                    <div class="row-playlist">Nome playlist</div>
-                    <div class="row-playlist">Nome playlist</div>
-                    <div class="row-playlist">Nome playlist</div>
-                    <div class="row-playlist">Nome playlist</div>
-                    <div class="row-playlist">Nome playlist</div>
-                    <div class="row-playlist">Nome playlist</div>
-                    <div class="row-playlist">Nome playlist</div>
-                </div> -->
-
-
-
-
             </div>
 
+<!-- MENU COLONNA SINISTRA CENTRALE + SCROLL -->
+            <ul class="playlist desktop">
+                <li>
+                    <a href="" >Nome Playlist</a>
+                </li>
+                <li>
+                    <a href="" >Nome Playlist</a>
+                </li>
+                <li>
+                    <a href="" >Nome Playlist</a>
+                </li>
+                <li>
+                    <a href="" >Nome Playlist</a>
+                </li>
+                <li>
+                    <a href="" >Nome Playlist</a>
+                </li>
+                <li>
+                    <a href="" >Nome Playlist</a>
+                </li>
+                <li>
+                    <a href="" >Nome Playlist</a>
+                </li>
+            </ul>
+
+<!-- MENU COLONNA SINISTRA  BOTTOM-->
             <div class="nav-bottom">
 
                 <ul class="profile">
@@ -113,14 +94,11 @@
                         <a href="">
                             <img class="download" src="img/download.svg" alt="">
                         </a>
-                        <a class="txt" href="">Installa app</a>
+                        <a class="txt desktop" href="">Installa app</a>
                     </li>
-                    <hr>
                     <li>
-                        <a href="">
-                            <img class="profile-img" src="img/profile.svg" alt="">
-                        </a>
-                        <a class="txt-white" href="">Paolo Calafiore</a>
+                        <img class="profile-img" src="img/profile.svg" alt="">
+                        <a class="txt-white desktop" href="">Paolo Calafiore</a>
                     </li>
                 </ul>
             </div>
@@ -129,13 +107,12 @@
         </nav>
 
     </header>
+<!-- FINE MENU COLONNA SINISTRA -->
 
-
-
-    <!-- CONTENITORE DEL BUNNER E ALBUM -->
+<!-- CONTENITORE DEL BUNNER E ALBUM -->
     <main>
 
-        <!-- TOP CON UPGRADE -->
+<!-- TOP CON UPGRADE -->
         <div class="bunner">
 
             <div class="upgrade">
@@ -144,7 +121,8 @@
             
         </div>
 
-        <!-- CONTENITORE DI ALBUM DA RIPRODURRE -->
+<!-- CONTENITORE DI ALBUM DA RIPRODURRE -->
+
         <ul class="nav-album">
             <li>
                 <a href="">IN EVIDENZA</a>
@@ -157,6 +135,7 @@
             <li><a href="">SCOPRI</a><hr class="select"></li>
         </ul>
 
+<!-- PRIMA RIGA DI ALBUM DA RIPRODURRE -->
         <h1>Recently played</h1>
 
         <div class="row-album album-full">
@@ -232,10 +211,10 @@
 
 
 
-
+<!-- SECONDA RIGA DI ALBUM DA RIPRODURRE -->
         <h1>Creato per Paolo Calafiore</h1>
         <span class="under-title">Più ascolti, più accurati saranno i suggerimenti</span>
-                <div class="row-album">
+        <div class="row-album album-empty">
 
             <div class="box-album">
                 <figure>
@@ -259,10 +238,10 @@
 
         </div>
 
-
+<!-- TERZA RIGA DI ALBUM DA RIPRODURRE -->
         <h1>Artisti più popolari</h1>
         <span class="under-title">Più ascolti, più accurati saranno i suggerimenti</span>
-                <div class="row-album">
+        <div class="row-album album-empty">
 
             <div class="box-album">
                 <figure>
@@ -289,9 +268,10 @@
 
 
 
-    </main>
-   
-    <!-- PLAYER MUSICA -->
+    </main> 
+<!-- FINE CONTENITORE DEL BUNNER E ALBUM -->
+
+<!-- PLAYER MUSICA SINISTRA-->
     <footer>
 
         <div class="footer-left">
@@ -302,7 +282,7 @@
             </div>
             <div class="title-played">
                 <h5>Sinister</h5>
-                <h6>Brano Nome</h6>
+                <a href=""><h6>Brano Nome</h6></a>
             </div>
             <div class="action-played">
                 <i class="far fa-heart"></i>
@@ -312,7 +292,7 @@
         </div>
 
 
-
+<!-- PLAYER MUSICA CENTRALE-->
         <div class="footer-central">
 
             <div class="icon-stream">
@@ -329,9 +309,10 @@
                 <div class="time">0:25</div>
                 <div class="line">
                     <div class="line-progress">
-                        <div class="line-progress-white"></div>
-                        <div class="line-progress-selected"></div>
-                        <div class="circle-progress-selected"></div>
+                        <div class="line-progress-white">
+                            <div class="circle-progress-selected"></div>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="time">4:35</div>
@@ -339,6 +320,7 @@
 
         </div>
 
+<!-- PLAYER MUSICA DESTRA-->
         <div class="footer-right">
             
             <i class="fas fa-list"></i>
@@ -346,9 +328,9 @@
             <i class="fas fa-volume-up"></i>
             <div class="audio">
                 <div class="line-progress">
-                    <div class="line-progress-white"></div>
-                    <div class="line-progress-selected"></div>
-                    <div class="circle-progress-selected"></div>
+                    <div class="line-progress-white">
+                        <div class="circle-progress-selected"></div>
+                    </div>
                 </div>
             </div>
         </div>
