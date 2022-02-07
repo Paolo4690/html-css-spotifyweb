@@ -623,12 +623,7 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
 } 
 /* FINE EFFETTI HOVER  *//* FINE EFFETTI HOVER  *//* FINE EFFETTI HOVER  */
 
-
-
-
-
 /* EFFETTO HOVER SPOTIFY ATTUALE */
-
 main .row-album .box-album-new {
     flex: 0 1 calc(100% / 6 - 1.6rem);
     padding: 1.5rem .9rem .8rem .9rem;
@@ -675,50 +670,14 @@ main .row-album .box-album-new:hover .play-green {
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, .6);
 }
 
-/*
-main .row-album .box-album-new .play-green {
-    display: none;
-}
-
-main .row-album .box-album-new:hover .play-green {
-    display: inline;
-    position: absolute;
-    right: 10%;
-    bottom: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
-    width: 24%;
-    height: 24%;
-    border-radius: 50%;
-    background-color: #1db954;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, .6);
-    animation: play-green .3s linear;
-}
-
- @keyframes play-green {
-     0% {
-         bottom: 2%;
-         color: transparent;
-         background-color: transparent;
-         box-shadow: 0;
-     }
- } */
-
-
-
-
-
-
 /* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY */
-@media screen and (min-width:1101px) and (max-width:1460px) {
+@media screen and (min-width:1201px) and (max-width:1400px) {
     main .row-album .box-album-new {
         flex: 0 1 calc(100% / 5 - 1.6rem);
     }
 }
 
-@media screen and (min-width:901px) and (max-width:1100px) {
+@media screen and (min-width:992px) and (max-width:1200px) {
     main .row-album .box-album {
     flex: 0 1 calc(100% / 4);
     }
@@ -736,7 +695,7 @@ main .row-album .box-album-new:hover .play-green {
     }
 }
 
-@media screen and (min-width:701px) and (max-width:900px) {
+@media screen and (min-width:768px) and (max-width:991px) {
     main .row-album .box-album {
         flex: 0 1 calc(100% / 3);
         }
@@ -746,7 +705,7 @@ main .row-album .box-album-new:hover .play-green {
         }
         
         main .album-full {
-            justify-content: flex-start;
+            justify-content: center;
         }
         
         footer .title-played {
@@ -754,7 +713,7 @@ main .row-album .box-album-new:hover .play-green {
         }
 }
 
-@media screen and (min-width:601px) and (max-width:700px) {
+@media screen and (min-width:576px) and (max-width:767px) {
     main .row-album .box-album {
     flex: 0 1 calc(100% / 2);
     max-width: 235px;
@@ -901,4 +860,3 @@ main .row-album .box-album-new:hover .play-green {
         margin-bottom: 5px;
     }
 }
-
