@@ -609,7 +609,6 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
     position: absolute;
     top: -6px;
     right: -5px;
-
     width: .8rem;
     height: .8rem;
     background-color: var(--white);
@@ -619,15 +618,11 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
 /* FINE EFFETTI HOVER  *//* FINE EFFETTI HOVER  *//* FINE EFFETTI HOVER  */
 
 /* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY */
-@media screen and (min-width:701px) and (max-width:1100px) {
+@media screen and (min-width:801px) and (max-width:1100px) {
     main .row-album .box-album {
     flex: 0 1 calc(100% / 4);
     }
-
-    main .row-album .box-album h3 {
-        font-size: .9rem;
-    }
-
+    
     main .album-full {
         justify-content: flex-start;
     }
@@ -637,16 +632,26 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
     }
 }
 
+@media screen and (min-width:701px) and (max-width:800px) {
+    main .row-album .box-album {
+        flex: 0 1 calc(100% / 3);
+        }
+        
+        main .album-full {
+            justify-content: flex-start;
+        }
+        
+        footer .title-played {
+            flex: 0 0 63px;
+        }
+}
+
 @media screen and (min-width:601px) and (max-width:700px) {
     main .row-album .box-album {
     flex: 0 1 calc(100% / 2);
     max-width: 235px;
     }
-
-    main .row-album .box-album h3 {
-        font-size: .9rem;
-    }
-
+    
     main .album-full,
     main .album-empty {
         justify-content: center;
@@ -714,10 +719,6 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
         flex: 0 1 calc(100% / 2);
         max-width: 260px;
     }
-
-    main .row-album .box-album h3 {
-        font-size: .9rem;
-    }
     
     main .album-full,
     main .album-empty {
@@ -748,13 +749,14 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
         padding-bottom: 4.5rem;
     }
 
-    main .row-album .box-album h3 {
-        font-size: .9rem;
-    }
-
     main .album-full,
     main .album-empty {
         justify-content: center;
+    }
+
+    main h2,
+    main span.under title {
+        text-align: center;
     }
 
     footer .title-played {
