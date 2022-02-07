@@ -3,6 +3,12 @@
     --white: #fff;
     --grey: #6f6f6f;
     --green: #adff2d;
+    /* larghezze */
+    --w-header: 200px;
+    --w-header-small: 45px;
+    --h-bunner: 80px;
+    --h-footer: 80px;
+
 }
 
 * {
@@ -12,25 +18,70 @@
 }
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #141922;
     color: var(--grey);
 }
 
-/* MENU LATERALE *//* MENU LATERALE *//* MENU LATERALE *//* MENU LATERALE */
+
+/* LAYOUT *//* LAYOUT *//* LAYOUT *//* LAYOUT *//* LAYOUT */
 header {
     position: fixed;
     top: 0;
     left: 0;
     
 
-    height: calc(100vh - 80px);
-    width: 200px;
+    height: calc(100% - var(--h-footer));
+    width: var(--w-header);
 
     padding-right: 20px;
 
     background-color: #000;
 }
+
+.bunner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+
+    width: calc(100vw - var(--w-header));
+    height: var(--h-bunner);
+
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+main {
+    margin-left: var(--w-header);
+    width: calc(100vw - var(--w-header));
+    height: calc(100vh - var(--h-footer));
+    padding: calc(var(--h-bunner) + 10px) 0 0 .8rem;
+    overflow-y: auto;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: var(--h-footer);
+
+    background-color: #282828;
+}
+/* FINE LAYOUT *//* FINE LAYOUT *//* FINE LAYOUT *//* FINE LAYOUT */
+
+/* MENU LATERALE *//* MENU LATERALE *//* MENU LATERALE *//* MENU LATERALE */
+
 nav {
     display: flex;
     flex-direction: column;
@@ -95,7 +146,7 @@ nav ul li a.nav-txt{
 
 nav ul li a.txt-white {
     color: var(--white);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 nav .add-playlist {
@@ -103,9 +154,14 @@ nav .add-playlist {
     padding-left: 20px;
 }
 
+nav .add-playlist a{
+    font-weight: 700;
+}
+
 nav h3 {
     font-size: .9rem;
     color: var(--white);
+    font-weight: 600;
 }
 
 nav i {
@@ -178,26 +234,10 @@ nav ul.profile li img.profile-img {
 
 
 /* MAIN *//* MAIN *//* MAIN *//* MAIN *//* MAIN *//* MAIN *//* MAIN */
-.bunner{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99;
-
-    width: calc(100vw - 200px);
-    height: 80px;
-
-
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
 .bunner .upgrade {
     width: 200px;
-    height: 30px;
     line-height: 28px;
     text-align: center;
     font-size: .7rem;
@@ -212,13 +252,6 @@ nav ul.profile li img.profile-img {
     color: var(--white);
 }
 
-main {
-    margin-left: 200px;
-    width: calc(100vw - 200px);
-    height: calc(100vh - 80px);
-    padding: 90px 0 0 .8rem;
-    overflow-y: auto;
-}
 
 main ul.nav-album {
     display: flex;
@@ -309,13 +342,13 @@ figure .hov-play .fa-play-circle {
 
 main .row-album .box-album h3 {
     color: var(--white);
-    font-size: 1rem;
+    font-size: .9rem;
     padding-top: .6rem;
 }
 
 main  span {
     color: var(--grey);
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: 600;
 }
 
@@ -326,20 +359,7 @@ main  span.under-title {
 
 
 /* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER *//* FOOTER */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    position: fixed;
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 80px;
-
-    background-color: #282828;
-}
 
 /* FOOTER LEFT  *//* FOOTER LEFT  */
 footer .footer-left {
@@ -655,8 +675,7 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
 @media screen and (max-width:600px) {
 
     header {
-        height: calc(100% - 80px);
-        width: 45px;
+        width: var(--w-header-small);
         padding: 0 ;
         }
 
@@ -691,7 +710,12 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
     nav ul.profile li img.profile-img {
         width: 25px;
         height: 25px;
-        margin-top: .5rem;
+        margin-top: .3rem;
+    }
+
+    nav ul.profile li:last-child {
+        border: 0;
+        padding-top: 0;
     }
     
     nav ul.profile li img {
@@ -702,14 +726,12 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
 
 
     .bunner{
-        width: calc(100vw - 45px);
+        width: calc(100vw - var(--w-header-small));
     }
     
     main {
-        margin-left: 45px;
-        width: calc(100vw - 45px);
-        height: calc(100vh - 80px);
-        padding-top: 90px;
+        margin-left: var(--w-header-small);
+        width: calc(100vw - var(--w-header-small));
     }
 
     main .row-album .box-album {
