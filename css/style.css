@@ -51,7 +51,7 @@ main {
     margin-left: var(--w-header);
     width: calc(100vw - var(--w-header));
     height: calc(100vh - var(--h-footer));
-    padding: calc(var(--h-bunner) + 10px) 0 0 .8rem;
+    padding-top: calc(var(--h-bunner) + 10px);
     overflow-y: auto;
 }
 
@@ -301,8 +301,7 @@ main ul.nav-album li hr.select {
 main h2 {
     color: var(--white);
     font-size: 1.7rem;
-    padding-top: 2rem;
-    padding-bottom: .3rem;
+    padding: 2rem 0 .3rem .8rem;
 }
 
 main h2:nth-of-type(1) {
@@ -323,6 +322,9 @@ main .row-album .box-album {
     flex: 0 1 calc(100% / 6);
     max-width: 220px;
     text-align: center;
+}
+main .album-empty {
+    padding-left: .8rem;
 }
 
 main .row-album .box-album img {
@@ -361,6 +363,10 @@ main .row-album .box-album h3 {
     color: var(--white);
     font-size: .9rem;
     padding-top: .6rem;
+}
+
+main  span.under-title {
+    padding-left: .8rem;
 }
 
 main .box-album span,
@@ -617,10 +623,68 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
 } 
 /* FINE EFFETTI HOVER  *//* FINE EFFETTI HOVER  *//* FINE EFFETTI HOVER  */
 
+
+
+
+
+/* EFFETTO HOVER SPOTIFY ATTUALE */
+
+main .row-album .box-album-new {
+    flex: 0 1 calc(100% / 6 - 1.6rem);
+    padding: 1.5rem .9rem .8rem .9rem;
+    margin: .8rem;
+    border-radius: 4%;
+    background-color: #1b222e;
+    cursor: pointer;
+    transition: all .6s;
+}
+
+main .row-album .box-album-new:hover {
+    background-color: #2f3b51;
+}
+
+.cont-play-green {
+    position: relative;
+}
+
+.play-green {
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    width: 24%;
+    height: 24%;
+    border-radius: 50%;
+    background-color: #1db954;
+    transition: all .6s;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, .6);
+}
+
+.box-album-new img {
+    box-shadow: 0 0 12px rgba(0, 0, 0, .6);
+}
+
+
+
+
+
 /* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY *//* MEDIA QUERY */
+@media screen and (min-width:1101px) and (max-width:1460px) {
+    main .row-album .box-album-new {
+        flex: 0 1 calc(100% / 5 - 1.6rem);
+    }
+}
+
 @media screen and (min-width:801px) and (max-width:1100px) {
     main .row-album .box-album {
     flex: 0 1 calc(100% / 4);
+    }
+
+    main .row-album .box-album-new {
+        flex: 0 1 calc(100% / 4 - 1.6rem);
     }
     
     main .album-full {
@@ -637,6 +701,10 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
         flex: 0 1 calc(100% / 3);
         }
         
+        main .row-album .box-album-new {
+            flex: 0 1 calc(100% / 3 - 1.6rem);
+        }
+        
         main .album-full {
             justify-content: flex-start;
         }
@@ -650,6 +718,10 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
     main .row-album .box-album {
     flex: 0 1 calc(100% / 2);
     max-width: 235px;
+    }        
+
+    main .row-album .box-album-new {
+        flex: 0 1 calc(100% / 2 - 1.6rem);
     }
     
     main .album-full,
@@ -718,6 +790,10 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
     main .row-album .box-album {
         flex: 0 1 calc(100% / 2);
         max-width: 260px;
+    }        
+
+    main .row-album .box-album-new {
+        flex: 0 1 calc(100% / 2 - 1.6rem);
     }
     
     main .album-full,
@@ -743,6 +819,9 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
     main .row-album .box-album {
         flex: 0 1 100%;
         max-width: 235px;
+    }        
+    main .row-album .box-album-new {
+        flex: 0 1 calc(100% - 1.6rem);
     }
 
     main .row-album:last-child {
@@ -776,3 +855,4 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
         margin-bottom: 5px;
     }
 }
+
