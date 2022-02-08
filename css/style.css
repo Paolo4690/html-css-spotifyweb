@@ -84,7 +84,8 @@ button {
     cursor: pointer;
 }
 
-@media screen and (max-width:600px) {
+
+@media screen and (max-width:575px) {
     header {
         width: var(--w-header-small);
         padding: 0 ;
@@ -743,7 +744,8 @@ main .row-album .box-album-new:hover .play-green {
     }
 }
 
-@media screen and (max-width:600px) {
+
+@media screen and (max-width:575px) {
     .desktop {
         display: none;
     } 
