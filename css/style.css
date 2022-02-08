@@ -456,6 +456,7 @@ footer .footer-central .icon-stream {
 }
 
 footer .footer-central .icon-stream i {
+    opacity: .6;
     flex: 0 0 35px;
 }
 
@@ -519,6 +520,7 @@ footer .footer-right {
 
 footer .footer-right i {
     padding-right: .7rem;
+    opacity: .6;
 }
 
 footer .footer-right .audio {
@@ -526,16 +528,12 @@ footer .footer-right .audio {
     height: 2px;
     flex: 0 1 100px;
     min-width: 40px;
-}
-
-.audio {
-    position: relative;
-    height: 2px;
-    min-width: 100px;
     max-width: 500px;
-    flex: 0 1 100%;
 }
- 
+ .over-audio-act {
+     display: flex;
+     align-items: center;
+ }
 .audio .line-progress {
     width: 100%;
     border: 2px solid var(--grey);
@@ -577,7 +575,9 @@ nav .add-playlist button:hover i {
     opacity: 1;
 }
 
-.nav-bottom ul.profile li:hover .download {
+.nav-bottom ul.profile li:hover .download,
+footer .footer-central .icon-stream i:hover,
+footer .footer-right i:hover {
     opacity: 1;
 }
 
@@ -607,12 +607,12 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
 }
 
 .line-stream .line-progress:hover .line-progress-white,
-.audio .line-progress:hover .line-progress-white {
+.audio .line-progress:hover .line-progress-white,
+.over-audio-act:hover .line-progress-white {
     border: 2px solid var(--green);
 } 
 
-.line-stream .line-progress:hover .circle-progress-selected,
-.audio .line-progress:hover .circle-progress-selected {
+.line-stream .line-progress:hover .circle-progress-selected {
     position: absolute;
     top: -6px;
     right: -5px;
@@ -622,6 +622,19 @@ footer .footer-central .icon-stream .fa-play-circle:hover {
     border-radius: 50%;
     cursor: pointer;
 } 
+
+.audio .line-progress:hover .circle-progress-selected,
+.over-audio-act:hover .circle-progress-selected  {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    width: .8rem;
+    height: .8rem;
+    background-color: var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+} 
+
 /* FINE EFFETTI HOVER  *//* FINE EFFETTI HOVER  *//* FINE EFFETTI HOVER  */
 
 /* EFFETTO HOVER SPOTIFY ATTUALE */
