@@ -128,7 +128,7 @@ nav ul.principal li {
     padding-left: 17px;
     border-left: 3px solid black;
     margin-bottom: 5px;
-    transition: all .4s;
+    transition: border .4s;
 }
 
 nav ul.principal .line-select {
@@ -143,13 +143,13 @@ nav ul li img {
 nav ul li img.nav-img,
 .nav-bottom .profile img {
     opacity: .6;
-    transition: all .3s;
+    transition: opacity .3s;
 }
 
 span {
     text-decoration: none;
     color: var(--grey);
-    transition: all .3s;
+    transition: color .3s;
 }
 
 nav  span{
@@ -527,7 +527,7 @@ footer .footer-right .audio {
     position: relative;
     height: 2px;
     flex: 0 1 100px;
-    min-width: 40px;
+    min-width: 100px;
     max-width: 500px;
 }
  .over-audio-act {
